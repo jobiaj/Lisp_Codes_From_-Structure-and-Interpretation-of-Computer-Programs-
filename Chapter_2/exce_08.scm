@@ -1,0 +1,8 @@
+(define (make-interval lower upper) (cons lower upper))
+(define (upper-bound x) (cdr x))
+(define (lower-bound x) (car x))
+(define x (make-interval -1.0 1.0))
+(define y (make-interval 1.0 10.0))
+(define (sub-interval x y)
+   (make-interval (- (lower-bound x) (lower-bound y)) (- (upper-bound x) (upper-bound y))))
+(sub-interval x y)

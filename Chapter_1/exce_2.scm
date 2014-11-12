@@ -1,0 +1,6 @@
+(define (square x) (* x x))
+(define (sum-of-squares x y z)
+	(cond ((or (and (> x y) (> y z)) (and (> y x) (> x z))) ((square x) + (square y)))
+              ((or (and (> y z) (> z x)) (and (> z y) (> y x))) ((square y) + (square z)))
+	      ((or (and (> x z) (> z y)) (and (> z x) (> x y))) ((square x) + (square z)))))  
+(sum-of-squares 1 2 3)

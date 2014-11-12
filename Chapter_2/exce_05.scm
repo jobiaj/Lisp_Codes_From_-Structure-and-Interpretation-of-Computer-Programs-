@@ -1,0 +1,10 @@
+(define (make-pair a b) (cons a b))
+(define (a x) (car x))
+(define (b x) (cdr x))
+(define (expt b n)
+    (if (= n 0)
+        1
+        (* b (expt b (- n 1)))))
+(define (exponent a b)
+        (* (expt 3 a) (expt 2 b)))
+(exponent 1 2)

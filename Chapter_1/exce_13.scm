@@ -1,0 +1,10 @@
+(define (fib n)
+   (cond ((= n 0) 0)
+         ((= n 1) 1)
+	 (else (+ (fib (- n 1)) (fib (+ n 2))))
+(define power (x n)
+   (cond ((= n 0) 1)
+         ((= (rem n 2) 0) (expt (power x (/ n 2)) 2))
+         (t (* x (power x (- n 1))))))
+(power (2 2))
+
